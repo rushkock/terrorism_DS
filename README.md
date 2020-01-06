@@ -1,4 +1,4 @@
 # DataSystems - Extrapolation Terrorism, Building a Future Modus Operandi
 
 # Github pages
-https://rushkock.github.io/terrorism_DS/
+[link to github pages](https://rushkock.github.io/terrorism_DS/docs/code/html/index.html)
