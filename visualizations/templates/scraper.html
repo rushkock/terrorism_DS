@@ -5,5 +5,18 @@
 {% endblock %}
 
 {% block main %}
-  <h1>Insert html here @Haroen and @dennis</h1>
+  <table style="width:100%">
+    <tr>
+      <th>Url</th>
+      <th>Tweet</th>
+      <th>Sentiment</th>
+    </tr>
+    {% for key in data %}
+    <tr>
+      <td><a href="{{ data[key].url }}">{{ data[key].url }}</a></td>
+      <td>{{ data[key].tweet }}</td>
+      <td>{{ data[key].sentiment }}</td>
+    </tr>
+    {% endfor %}
+  </table>
 {% endblock %}
