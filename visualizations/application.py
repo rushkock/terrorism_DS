@@ -1,5 +1,6 @@
 import sys, os
 from flask import Flask, render_template
+from flask_frozen import Freezer
 import json
 import ast
 
@@ -11,7 +12,7 @@ with open("static/data/tweet_dump.json", "r") as f:
 # transform unicode into python dict
 tweet_dump_dict = ast.literal_eval(tweet_dump_unicode)
 
-@app.route("/visualizations")
+@app.route("/visualizations.html")
 def index():
     return render_template("index.html", visualizations=True)
 
@@ -19,6 +20,12 @@ def index():
 def home():
     return render_template("home.html")
 
-@app.route("/scraper")
+@app.route("/scraper.html")
 def scraper():
     return render_template("scraper.html", data=tweet_dump_dict)
+
+
+freezer = Freezer(app)
+
+if __name__ == '__main__':
+    freezer.freeze()
