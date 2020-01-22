@@ -5,7 +5,8 @@
 {% endblock %}
 
 {% block main %}
-  <table style="width:100%">
+<link rel="stylesheet" href="static/css/scraper.css">
+  <table style="width:100%" id=tweet_dump>
     <tr>
       <th>Url</th>
       <th>Tweet</th>
@@ -13,9 +14,9 @@
     </tr>
     {% for key in data %}
     <tr>
-      <td><a href="{{ data[key].url }}">{{ data[key].url }}</a></td>
-      <td>{{ data[key].tweet }}</td>
-      <td>{{ data[key].sentiment }}</td>
+      <td><a href="http://{{ key.url }}" target='_blank'>{{ key.url }}</a></td>
+      <td>{{ key.tweet }}</td>
+      <td>{{ key.sentiment }}</td>
     </tr>
     {% endfor %}
   </table>

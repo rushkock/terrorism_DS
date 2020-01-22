@@ -1,16 +1,19 @@
 import sys, os
 from flask import Flask, render_template
-from flask_flatpages import FlatPages
-from flask_frozen import Freezer # Added
+import json
+import ast
 
 app = Flask(__name__)
-pages = FlatPages(app)
-freezer = Freezer(app) # Added
 
-# URL Routing - Home Page
+# read json file
+with open("static/data/tweet_dump.json", "r") as f:
+  tweet_dump_unicode = json.loads(f.read())
+# transform unicode into python dict
+tweet_dump_dict = ast.literal_eval(tweet_dump_unicode)
+
 @app.route("/visualizations")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", visualizations=True)
 
 @app.route("/")
 def home():
@@ -18,14 +21,4 @@ def home():
 
 @app.route("/scraper")
 def scraper():
-    return render_template("scraper.html")
-
-@app.route("/extrapolation")
-def extrapolation():
-    return render_template("extrapolation.html")
-# Main Function, Runs at http://0.0.0.0:8000
-if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "build":
-        freezer.freeze()
-    else:
-        app.run(port=8000)
+    return render_template("scraper.html", data=tweet_dump_dict)
