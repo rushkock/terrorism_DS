@@ -1,0 +1,189 @@
+.lineChart{
+  position: absolute;
+  top: 700px;
+  left: 50px;
+}
+.worldMap{
+  position: absolute;
+  top: 100px;
+  left: 10px;
+}
+
+/*  Barchart */
+.barChart {
+  position: absolute;
+  top: 65px;
+  left: 1100px;
+  height: 600px;
+  overflow: scroll;
+}
+
+
+.donutChart {
+  position: absolute;
+  top: 800px;
+  left: 1000px;
+}
+
+.legendDiv {
+  position: absolute;
+  top: 50px;
+  left: 1000px;
+}
+
+/* Whole Box */
+.boxMap {
+  position: absolute;
+  top: 750px;
+  left: 1000px;
+  width: 500px;
+  text-align: center;
+  font-family: Georgia;
+}
+
+/*  ////////////////////////////////////////////////////////////////////////
+////////////////////////////// WORLD MAP  //////////////////////////////////
+///////////////////////////////////////////////////////////////////////  */
+
+
+.dropdown {
+  position: relative;
+  left: 500px;
+  display: inline-block;
+}
+
+/* TOOLTIP */
+.tooltip {
+  position: absolute;
+  line-height: 1.5;
+  font-weight: 1000;
+  font-family: "avenir next", Arial, sans-serif;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #FFA500;
+  border-radius: 1px;
+  pointer-events: none;
+  text-align: center;
+}
+
+/* SLIDER */
+#slider {
+  position: absolute;
+  top: 500px;
+}
+
+/*  ////////////////////////////////////////////////////////////////////////
+//////////////////////////////   INFO BOX  /////////////////////////////////
+///////////////////////////////////////////////////////////////////////  */
+
+
+/* Small box with border */
+.subBoxMap {
+  position: absolute;
+  top: 350px;
+  left: 80px;
+  width: 300px;
+  height: 150px;
+  border: solid black 0.5px;
+  font-family: Georgia;
+  line-height: normal;
+}
+
+.subBoxMap div {
+  visibility: hidden;
+}
+
+.countryStatistics {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.label {
+  font-weight: bold;
+  float: left;
+}
+
+.val {
+  float: middle;
+  margin-left: 3px;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.noDataLegend {
+  position: absolute;
+  top: 600px;
+  left: 1030px;
+}
+
+/*  ////////////////////////////////////////////////////////////////////////
+////////////////////////////// BAR CHART ///////////////////////////////////
+///////////////////////////////////////////////////////////////////////  */
+
+
+
+/* tooltip */
+.mytooltip {
+  position: absolute;
+  text-align: left;
+  width: 100px;
+  height: 50;
+  background-color: #e59400;
+  border-radius: 5px;
+  color: #000000;
+}
+
+/*  text inside box */
+.mytooltip span {
+  display: block;
+  text-align: center;
+  width: 100px;
+  height: auto;
+  margin: 5px auto;
+}
+
+/*  ////////////////////////////////////////////////////////////////////////
+//////////////////////////////   SUNBURST  /////////////////////////////////
+///////////////////////////////////////////////////////////////////////  */
+
+
+
+.slice {
+    cursor: pointer;
+}
+
+.slice .main-arc {
+    stroke: black;
+    stroke-width: 0.2px;
+}
+
+.slice .hidden-arc {
+    fill: none;
+}
+
+.slice text {
+    pointer-events: none;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
+
+/*  ////////////////////////////////////////////////////////////////////////
+////////////////////////////// FOOTER //////////////////////////////////////
+///////////////////////////////////////////////////////////////////////  */
+
+.page-footer {
+  position: absolute;
+  background-color: black;
+  top: 1350px;
+  width: 100%;
+}
+
+.uva {
+  height:30px;
+  width:30px;
+}
+
+.footer-copyright {
+  background-color: black;
+  color: white;
+}

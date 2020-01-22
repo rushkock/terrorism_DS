@@ -1,0 +1,28 @@
+#tweet_dump {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tweet_dump td, #tweet_dump th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tweet_dump tr:nth-child(even){background-color: #f2f2f2;}
+
+#tweet_dump tr:hover {background-color: #ddd;}
+
+#tweet_dump th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+#tweet_dump{
+  position: absolute;
+  top: 70px;
+  left: 10px;
+}

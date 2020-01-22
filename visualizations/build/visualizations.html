@@ -1,0 +1,264 @@
+<!-- Team G4 -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+  <!-- documentation at http://getbootstrap.com/docs/4.0/, alternative themes at https://bootswatch.com/4-alpha/ -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> -->
+
+
+  <!-- https://icons8.com/icons/set/favicon -->
+  <link rel="shortcut icon" type="image/png" href="/static/images/favicon.png"/>
+  <title>Extrapolating terrorism:
+    Visualizations
+</title>
+
+</head>
+
+<body>
+  <!-- Navbar for html -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light border">
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav mr-auto mt-2">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/visualizations">Visualizations</a></li>
+        <li class="nav-item"><a class="nav-link" href="/scraper">Scraper</a></li>
+      </ul>
+
+      <ul class="navbar-nav mr-auto mt-2">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" aria-haspopup="true" data-toggle="dropdown">Filter donut chart</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" id="donut" value="attack_type" href="#">Attack type</a>
+            <a class="dropdown-item" id="donut" value="gname" href="#">Group name</a>
+            <a class="dropdown-item" id="donut" value="target_type" href="#">target type</a>
+          </div>
+        </li>
+        <li class='nav-item dropdown'>
+              <a class='nav-link dropdown-toggle' id='cat-drop' href='#' data-toggle='dropdown'><span id='selected'>Country</span></a>
+              <div class='dropdown-menu scrollable-menu' id='countries'>
+                <a class='dropdown-item' id='drop_country' value='Afghanistan' href='#'>Afghanistan</a>
+                <a class='dropdown-item' id='drop_country' value='Albania' href='#'>Albania</a>
+                <a class='dropdown-item' id='drop_country' value='Algeria' href='#'>Algeria</a>
+                <a class='dropdown-item' id='drop_country' value='Angola' href='#'>Angola</a>
+                <a class='dropdown-item' id='drop_country' value='Argentina' href='#'>Argentina</a>
+                <a class='dropdown-item' id='drop_country' value='Armenia' href='#'>Armenia</a>
+                <a class='dropdown-item' id='drop_country' value='Australia' href='#'>Australia</a>
+                <a class='dropdown-item' id='drop_country' value='Austria' href='#'>Austria</a>
+                <a class='dropdown-item' id='drop_country' value='Azerbaijan' href='#'>Azerbaijan</a>
+                <a class='dropdown-item' id='drop_country' value='Bahrain' href='#'>Bahrain</a>
+                <a class='dropdown-item' id='drop_country' value='Bangladesh' href='#'>Bangladesh</a>
+                <a class='dropdown-item' id='drop_country' value='Belarus' href='#'>Belarus</a>
+                <a class='dropdown-item' id='drop_country' value='Belgium' href='#'>Belgium</a>
+                <a class='dropdown-item' id='drop_country' value='Bolivia' href='#'>Bolivia</a>
+                <a class='dropdown-item' id='drop_country' value='Bosnia-Herzegovina' href='#'>Bosnia-Herzegovina</a>
+                <a class='dropdown-item' id='drop_country' value='Brazil' href='#'>Brazil</a>
+                <a class='dropdown-item' id='drop_country' value='Bulgaria' href='#'>Bulgaria</a>
+                <a class='dropdown-item' id='drop_country' value='Burkina Faso' href='#'>Burkina Faso</a>
+                <a class='dropdown-item' id='drop_country' value='Burundi' href='#'>Burundi</a>
+                <a class='dropdown-item' id='drop_country' value='Cambodia' href='#'>Cambodia</a>
+                <a class='dropdown-item' id='drop_country' value='Cameroon' href='#'>Cameroon</a>
+                <a class='dropdown-item' id='drop_country' value='Canada' href='#'>Canada</a>
+                <a class='dropdown-item' id='drop_country' value='Central African Republic' href='#'>Central African Republic</a>
+                <a class='dropdown-item' id='drop_country' value='Chad' href='#'>Chad</a>
+                <a class='dropdown-item' id='drop_country' value='Chile' href='#'>Chile</a>
+                <a class='dropdown-item' id='drop_country' value='China' href='#'>China</a>
+                <a class='dropdown-item' id='drop_country' value='Colombia' href='#'>Colombia</a>
+                <a class='dropdown-item' id='drop_country' value='Costa Rica' href='#'>Costa Rica</a>
+                <a class='dropdown-item' id='drop_country' value='Croatia' href='#'>Croatia</a>
+                <a class='dropdown-item' id='drop_country' value='Cuba' href='#'>Cuba</a>
+                <a class='dropdown-item' id='drop_country' value='Cyprus' href='#'>Cyprus</a>
+                <a class='dropdown-item' id='drop_country' value='Czech Republic' href='#'>Czech Republic</a>
+                <a class='dropdown-item' id='drop_country' value='Democratic Republic of the Congo' href='#'>Democratic Republic of the Congo</a>
+                <a class='dropdown-item' id='drop_country' value='Denmark' href='#'>Denmark</a>
+                <a class='dropdown-item' id='drop_country' value='Djibouti' href='#'>Djibouti</a>
+                <a class='dropdown-item' id='drop_country' value='Dominican Republic' href='#'>Dominican Republic</a>
+                <a class='dropdown-item' id='drop_country' value='Ecuador' href='#'>Ecuador</a>
+                <a class='dropdown-item' id='drop_country' value='Egypt' href='#'>Egypt</a>
+                <a class='dropdown-item' id='drop_country' value='El Salvador' href='#'>El Salvador</a>
+                <a class='dropdown-item' id='drop_country' value='Eritrea' href='#'>Eritrea</a>
+                <a class='dropdown-item' id='drop_country' value='Estonia' href='#'>Estonia</a>
+                <a class='dropdown-item' id='drop_country' value='Ethiopia' href='#'>Ethiopia</a>
+                <a class='dropdown-item' id='drop_country' value='Finland' href='#'>Finland</a>
+                <a class='dropdown-item' id='drop_country' value='France' href='#'>France</a>
+                <a class='dropdown-item' id='drop_country' value='Gabon' href='#'>Gabon</a>
+                <a class='dropdown-item' id='drop_country' value='Georgia' href='#'>Georgia</a>
+                <a class='dropdown-item' id='drop_country' value='Germany' href='#'>Germany</a>
+                <a class='dropdown-item' id='drop_country' value='Ghana' href='#'>Ghana</a>
+                <a class='dropdown-item' id='drop_country' value='Greece' href='#'>Greece</a>
+                <a class='dropdown-item' id='drop_country' value='Guatemala' href='#'>Guatemala</a>
+                <a class='dropdown-item' id='drop_country' value='Guinea' href='#'>Guinea</a>
+                <a class='dropdown-item' id='drop_country' value='Guyana' href='#'>Guyana</a>
+                <a class='dropdown-item' id='drop_country' value='Haiti' href='#'>Haiti</a>
+                <a class='dropdown-item' id='drop_country' value='Honduras' href='#'>Honduras</a>
+                <a class='dropdown-item' id='drop_country' value='Hong Kong' href='#'>Hong Kong</a>
+                <a class='dropdown-item' id='drop_country' value='Hungary' href='#'>Hungary</a>
+                <a class='dropdown-item' id='drop_country' value='India' href='#'>India</a>
+                <a class='dropdown-item' id='drop_country' value='Indonesia' href='#'>Indonesia</a>
+                <a class='dropdown-item' id='drop_country' value='Iran' href='#'>Iran</a>
+                <a class='dropdown-item' id='drop_country' value='Iraq' href='#'>Iraq</a>
+                <a class='dropdown-item' id='drop_country' value='Ireland' href='#'>Ireland</a>
+                <a class='dropdown-item' id='drop_country' value='Israel' href='#'>Israel</a>
+                <a class='dropdown-item' id='drop_country' value='Italy' href='#'>Italy</a>
+                <a class='dropdown-item' id='drop_country' value='Ivory Coast' href='#'>Ivory Coast</a>
+                <a class='dropdown-item' id='drop_country' value='Jamaica' href='#'>Jamaica</a>
+                <a class='dropdown-item' id='drop_country' value='Japan' href='#'>Japan</a>
+                <a class='dropdown-item' id='drop_country' value='Jordan' href='#'>Jordan</a>
+                <a class='dropdown-item' id='drop_country' value='Kazakhstan' href='#'>Kazakhstan</a>
+                <a class='dropdown-item' id='drop_country' value='Kenya' href='#'>Kenya</a>
+                <a class='dropdown-item' id='drop_country' value='Kosovo' href='#'>Kosovo</a>
+                <a class='dropdown-item' id='drop_country' value='Kuwait' href='#'>Kuwait</a>
+                <a class='dropdown-item' id='drop_country' value='Kyrgyzstan' href='#'>Kyrgyzstan</a>
+                <a class='dropdown-item' id='drop_country' value='Laos' href='#'>Laos</a>
+                <a class='dropdown-item' id='drop_country' value='Latvia' href='#'>Latvia</a>
+                <a class='dropdown-item' id='drop_country' value='Lebanon' href='#'>Lebanon</a>
+                <a class='dropdown-item' id='drop_country' value='Liberia' href='#'>Liberia</a>
+                <a class='dropdown-item' id='drop_country' value='Libya' href='#'>Libya</a>
+                <a class='dropdown-item' id='drop_country' value='Macedonia' href='#'>Macedonia</a>
+                <a class='dropdown-item' id='drop_country' value='Madagascar' href='#'>Madagascar</a>
+                <a class='dropdown-item' id='drop_country' value='Malawi' href='#'>Malawi</a>
+                <a class='dropdown-item' id='drop_country' value='Malaysia' href='#'>Malaysia</a>
+                <a class='dropdown-item' id='drop_country' value='Maldives' href='#'>Maldives</a>
+                <a class='dropdown-item' id='drop_country' value='Mali' href='#'>Mali</a>
+                <a class='dropdown-item' id='drop_country' value='Mauritania' href='#'>Mauritania</a>
+                <a class='dropdown-item' id='drop_country' value='Mexico' href='#'>Mexico</a>
+                <a class='dropdown-item' id='drop_country' value='Moldova' href='#'>Moldova</a>
+                <a class='dropdown-item' id='drop_country' value='Morocco' href='#'>Morocco</a>
+                <a class='dropdown-item' id='drop_country' value='Mozambique' href='#'>Mozambique</a>
+                <a class='dropdown-item' id='drop_country' value='Myanmar' href='#'>Myanmar</a>
+                <a class='dropdown-item' id='drop_country' value='Namibia' href='#'>Namibia</a>
+                <a class='dropdown-item' id='drop_country' value='Nepal' href='#'>Nepal</a>
+                <a class='dropdown-item' id='drop_country' value='Netherlands' href='#'>Netherlands</a>
+                <a class='dropdown-item' id='drop_country' value='Nicaragua' href='#'>Nicaragua</a>
+                <a class='dropdown-item' id='drop_country' value='Niger' href='#'>Niger</a>
+                <a class='dropdown-item' id='drop_country' value='Nigeria' href='#'>Nigeria</a>
+                <a class='dropdown-item' id='drop_country' value='Norway' href='#'>Norway</a>
+                <a class='dropdown-item' id='drop_country' value='Pakistan' href='#'>Pakistan</a>
+                <a class='dropdown-item' id='drop_country' value='Panama' href='#'>Panama</a>
+                <a class='dropdown-item' id='drop_country' value='Papua New Guinea' href='#'>Papua New Guinea</a>
+                <a class='dropdown-item' id='drop_country' value='Paraguay' href='#'>Paraguay</a>
+                <a class='dropdown-item' id='drop_country' value='Peru' href='#'>Peru</a>
+                <a class='dropdown-item' id='drop_country' value='Philippines' href='#'>Philippines</a>
+                <a class='dropdown-item' id='drop_country' value='Poland' href='#'>Poland</a>
+                <a class='dropdown-item' id='drop_country' value='Portugal' href='#'>Portugal</a>
+                <a class='dropdown-item' id='drop_country' value='Qatar' href='#'>Qatar</a>
+                <a class='dropdown-item' id='drop_country' value='Republic of the Congo' href='#'>Republic of the Congo</a>
+                <a class='dropdown-item' id='drop_country' value='Russia' href='#'>Russia</a>
+                <a class='dropdown-item' id='drop_country' value='Rwanda' href='#'>Rwanda</a>
+                <a class='dropdown-item' id='drop_country' value='Saudi Arabia' href='#'>Saudi Arabia</a>
+                <a class='dropdown-item' id='drop_country' value='Senegal' href='#'>Senegal</a>
+                <a class='dropdown-item' id='drop_country' value='Serbia' href='#'>Serbia</a>
+                <a class='dropdown-item' id='drop_country' value='Sierra Leone' href='#'>Sierra Leone</a>
+                <a class='dropdown-item' id='drop_country' value='Somalia' href='#'>Somalia</a>
+                <a class='dropdown-item' id='drop_country' value='South Africa' href='#'>South Africa</a>
+                <a class='dropdown-item' id='drop_country' value='South Korea' href='#'>South Korea</a>
+                <a class='dropdown-item' id='drop_country' value='South Sudan' href='#'>South Sudan</a>
+                <a class='dropdown-item' id='drop_country' value='Spain' href='#'>Spain</a>
+                <a class='dropdown-item' id='drop_country' value='Sri Lanka' href='#'>Sri Lanka</a>
+                <a class='dropdown-item' id='drop_country' value='Sudan' href='#'>Sudan</a>
+                <a class='dropdown-item' id='drop_country' value='Sweden' href='#'>Sweden</a>
+                <a class='dropdown-item' id='drop_country' value='Switzerland' href='#'>Switzerland</a>
+                <a class='dropdown-item' id='drop_country' value='Syria' href='#'>Syria</a>
+                <a class='dropdown-item' id='drop_country' value='Taiwan' href='#'>Taiwan</a>
+                <a class='dropdown-item' id='drop_country' value='Tajikistan' href='#'>Tajikistan</a>
+                <a class='dropdown-item' id='drop_country' value='Tanzania' href='#'>Tanzania</a>
+                <a class='dropdown-item' id='drop_country' value='Thailand' href='#'>Thailand</a>
+                <a class='dropdown-item' id='drop_country' value='Tunisia' href='#'>Tunisia</a>
+                <a class='dropdown-item' id='drop_country' value='Turkey' href='#'>Turkey</a>
+                <a class='dropdown-item' id='drop_country' value='Uganda' href='#'>Uganda</a>
+                <a class='dropdown-item' id='drop_country' value='Ukraine' href='#'>Ukraine</a>
+                <a class='dropdown-item' id='drop_country' value='United Arab Emirates' href='#'>United Arab Emirates</a>
+                <a class='dropdown-item' id='drop_country' value='United Kingdom' href='#'>United Kingdom</a>
+                <a class='dropdown-item' id='drop_country' value='United States' href='#'>United States</a>
+                <a class='dropdown-item' id='drop_country' value='Uzbekistan' href='#'>Uzbekistan</a>
+                <a class='dropdown-item' id='drop_country' value='Venezuela' href='#'>Venezuela</a>
+                <a class='dropdown-item' id='drop_country' value='Vietnam' href='#'>Vietnam</a>
+                <a class='dropdown-item' id='drop_country' value='West Bank and Gaza Strip' href='#'>West Bank and Gaza Strip</a>
+                <a class='dropdown-item' id='drop_country' value='Yemen' href='#'>Yemen</a>
+                <a class='dropdown-item' id='drop_country' value='Yugoslavia' href='#'>Yugoslavia</a>
+                <a class='dropdown-item' id='drop_country' value='Zaire' href='#'>Zaire</a>
+                <a class='dropdown-item' id='drop_country' value='Zambia' href='#'>Zambia</a>
+                <a class='dropdown-item' id='drop_country' value='Zimbabwe' href='#'>Zimbabwe</a>
+              </div>
+            </li>
+        </ul>
+
+    </div>
+  </nav>
+
+  <!-- main content -->
+  <main class="container p-5">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <!-- stylesheets
+        <link rel="stylesheet" href="static/css/home.css">
+        <link rel="stylesheet" href="static/css/sources.css">-->
+        <link rel="stylesheet" href="static/css/visualizations.css">
+        <link rel="stylesheet" href="static/css/donut.css">
+        <link rel="stylesheet" href="static/css/line.css">
+
+        <!-- D3 links -->
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="static/js/topojson.js"></script>
+
+        <!-- JS script for charts -->
+        <script src="static/js/main.js"></script>
+        <script src="static/js/barchart.js"></script>
+        <script src="static/js/map.js"></script>
+        <script src="static/js/donut.js"></script>
+        <script src="static/js/line.js"></script>
+
+
+        <!-- slider -->
+        <script src="https://unpkg.com/d3-simple-slider"></script>
+        <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous"
+        />
+        <div class='legendDiv'></div>
+        <div class="noData"></div>
+        <!-- Add a box next to the map -->
+        <div class="boxMap">
+          <div class="countryStatistics">
+            <div class="label"> </div>
+            <h1><div class="filter val">Attack types in the Netherlands</div></h1>
+          </div>
+        </div>
+      <!-- div for the SVGs -->
+      <div class="barChart"></div>
+      <div class="worldMap">
+        <div class="row align-items-center" id="slider">
+          <div class="col-sm-2"><p id="value-time"></p></div>
+          <div class="col-sm"><div id="slider-time"></div></div>
+        </div>
+      </div>
+      <div class="lineChart" id="lineChart"></div>
+      <div class="sunburst" id="sunburst">
+      </div>
+      <div class="donutChart" id="donutChart">
+        <div class="selectedCountry" id=""><div>
+      </div>
+
+
+
+  </main>
+
+</body>
+
+</html>
