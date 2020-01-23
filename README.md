@@ -15,4 +15,4 @@ Insert description
 
 # Scraper
 Insert description
-![scraper](static/images/scraper.png)
+![scraper](visualizations/static/images/scraper.png)
