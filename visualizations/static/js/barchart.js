@@ -1,5 +1,5 @@
 var barPadding = 5;
-var margin = {top: 20, right: 0, bottom: 70, left: 130};
+var margin = {top: 20, right: 0, bottom: 70, left: 200};
 var w = 500 - margin.left - margin.right;
 var h = 2500 - margin.top - margin.bottom;
 
@@ -31,7 +31,7 @@ function makeBar (response) {
   // write text on x axis
   var suicides = svg.append('text')
                     .attr('y', 20)
-                    .attr('x', (w + margin.left + margin.right) / 2 - 130)
+                    .attr('x', (w + margin.left + margin.right) / 2 - 80)
                     .style('font-size', '20px')
                     .text('Number of terrorist attacks');
 
@@ -100,7 +100,7 @@ function makeRects (data, rect, color) {
                  .range([0, w]);
 
   function makeY (d, i) { return yScale(d.country) + 50; }
-  function makeX (d, i) { return 121; }
+  function makeX (d, i) { return 180; }
   function widthRect (d) { return xScale(d.success); }
   function heightRect (d) { return yScale.bandwidth(); }
   function makeColor (d) { return color(d.success); }
@@ -134,14 +134,14 @@ function makeAxes (data) {
                 .scale(xScale);
   svg.append('g')
      .attr('class', 'xAxis')
-     .attr('transform', 'translate(120, 50)')
+     .attr('transform', 'translate(180, 50)')
      .call(xAxis);
 
   var yAxis = d3.axisLeft()
                 .scale(yScale);
   svg.append('g')
      .attr('class', 'yAxis')
-     .attr('transform', 'translate(120, 50)')
+     .attr('transform', 'translate(180, 50)')
      .call(yAxis);
 }
 
