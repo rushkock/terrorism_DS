@@ -18,7 +18,8 @@
 
 
   <!-- https://icons8.com/icons/set/favicon -->
-  <link rel="shortcut icon" type="image/png" href="/static/images/favicon.png"/>
+  <link rel="stylesheet" href="static/css/layout.css">
+  <link rel="shortcut icon" type="image/png" href="static/images/favicon.png"/>
   <title>Extrapolating terrorism:
     Visualizations
 </title>
@@ -27,12 +28,12 @@
 
 <body>
   <!-- Navbar for html -->
-  <nav class="navbar navbar-expand-md navbar-light bg-light border">
+  <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light border">
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav mr-auto mt-2">
-        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/visualizations">Visualizations</a></li>
-        <li class="nav-item"><a class="nav-link" href="/scraper">Scraper</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="visualizations.html">Visualizations</a></li>
+        <li class="nav-item"><a class="nav-link" href="scraper.html">Scraper</a></li>
       </ul>
 
       <ul class="navbar-nav mr-auto mt-2">
@@ -214,14 +215,14 @@
 
         <!-- D3 links -->
         <script src="https://d3js.org/d3.v5.min.js"></script>
-        <script src="static/js/topojson.js"></script>
+        <script src="/static/js/topojson.js"></script>
 
         <!-- JS script for charts -->
-        <script src="static/js/main.js"></script>
-        <script src="static/js/barchart.js"></script>
-        <script src="static/js/map.js"></script>
-        <script src="static/js/donut.js"></script>
-        <script src="static/js/line.js"></script>
+        <script src="/static/js/main.js"></script>
+        <script src="/static/js/barchart.js"></script>
+        <script src="/static/js/map.js"></script>
+        <script src="/static/js/donut.js"></script>
+        <script src="/static/js/line.js"></script>
 
 
         <!-- slider -->
@@ -242,6 +243,7 @@
         </div>
       <!-- div for the SVGs -->
       <div class="barChart"></div>
+      <h1 class= "mapTitle"> Number of terrorist attacks per country </h1>
       <div class="worldMap">
         <div class="row align-items-center" id="slider">
           <div class="col-sm-2"><p id="value-time"></p></div>

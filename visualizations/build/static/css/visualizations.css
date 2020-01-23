@@ -9,6 +9,15 @@
   left: 10px;
 }
 
+.mapTitle {
+  position: absolute;
+  top: 65px;
+  left: 200px;
+  float: middle;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
 /*  Barchart */
 .barChart {
   position: absolute;
