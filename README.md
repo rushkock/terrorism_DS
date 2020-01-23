@@ -5,13 +5,13 @@
 
 
 # Home
-![home](static/images/home.png)
+![home](visualizations/static/images/home.png)
 
 # Visualizations
 Insert description
-![visualizations worldmap and barchart](static/images/visualizations_1.png)
+![visualizations worldmap and barchart](visualizations/static/images/visualizations_1.png)
 
-![visualizations linechart and donutchart](static/images/visualizations_2.png)
+![visualizations linechart and donutchart](visualizations/static/images/visualizations_2.png)
 
 # Scraper
 Insert description
