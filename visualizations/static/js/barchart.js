@@ -1,11 +1,11 @@
 var barPadding = 5;
 var margin = {top: 20, right: 0, bottom: 70, left: 200};
-var w = 500 - margin.left - margin.right;
+var w = 700 - margin.left - margin.right;
 var h = 2500 - margin.top - margin.bottom;
 
 // this function makes the barchart
 function makeBar (response) {
-  var data = processDate(response[1], 1998);
+  var data = processDate(response[1], 2016);
 
   // I chose to remove the values that are smaller than 1 because 0.something
   // suicides does not give a lot of information but it is very hard
